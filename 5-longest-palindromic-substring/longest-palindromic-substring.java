@@ -6,8 +6,8 @@ class Solution {
         int start = 0, maxLen = 1;
 
         for (int i = 0; i < s.length(); i++) {
-            int odd  = expand(i, i);        // e.g. "aba"
-            int even = expand(i, i + 1);    // e.g. "abba"
+            int odd  = expand(i, i);      
+            int even = expand(i, i + 1);   
 
             int best = Math.max(odd, even);
 
@@ -25,6 +25,6 @@ class Solution {
             left--;
             right++;
         }
-        return right - left - 1; // length of palindrome found
+        return right - left - 1; 
     }
 }
